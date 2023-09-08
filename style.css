@@ -1,44 +1,57 @@
 /* Estilo do retângulo vertical */
 .retangulo {
-    width: 200px;
-    height: 300px;
+    width: 30%; /* 200px */
+    height: 80%; /* 300px */
     background-color: lightblue;
     position: absolute;
-    top: 50%; /* Coloque o retângulo no meio verticalmente */
-    left: 50%; /* Coloque o retângulo no meio horizontalmente */
-    transform: translate(-50%, -50%); /* Ajuste para centralizar vertical e horizontalmente */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    object-fit: contain;
 }
 
 /* Estilo do quadrado */
 .quadrado {
-    width: 180px;
-    height: 200px;
+    width: 24%; /* 180px */
+    height: 43%; /* 200px */
     background-color: lightgoldenrodyellow;
     position: absolute;
-    top: 48%; /* Coloque o quadrado no meio verticalmente */
-    left: 50%; /* Coloque o quadrado no meio horizontalmente */
-    transform: translate(-50%, -50%); /* Ajuste para centralizar vertical e horizontalmente */
+    top: 42%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     z-index: 2;
+    object-fit: contain;
+}
+
+button {
+    background-color: red;
+    width: 4%; /* 20px */
+    height: 8%; /* 20px */
+    border-radius: 100%;
+    position: absolute;
+    top: 66%; 
+    left: 48%; 
+    z-index: 6;
+    object-fit: contain;
 }
 
 /* Estilo da imagem garra_aberta */
 #garra_aberta {
-    width: 100px;
-    height: 90px;
+    object-fit: contain;
+    width: 10%; /* 100px */
+    height: 20%; /* 90px */
     position: absolute;
-    top: 41.5%;
+    top: 30%; 
     left: 50%;
-    transform: translate(-50%, -50%); /* Ajuste para centralizar verticalmente e horizontalmente */
+    transform: translate(-50%, -50%); 
     z-index: 5;
-    transition: top 1s ease-in-out, width 1s ease-in-out; 
+    transition: top 1s ease-in-out, width 1s ease-in-out;
 }
 
-
-/* Estilo da imagem urso1 */
 #urso1 {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
+    width: 15%; /* 10% da largura do elemento pai */
+    height: 15%; /* 10% da altura do elemento pai */
+    object-fit: contain; /* Mantém a proporção e ajusta a imagem ao elemento pai */
     position: absolute;
     top: 55%; /* Posicione a imagem verticalmente no centro do retângulo */
     left: 50%;
@@ -46,5 +59,3 @@
     z-index: 4;
     transition: top 1s ease-in-out, left 1s ease-in-out;
 }
-
-
