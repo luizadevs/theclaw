@@ -1,0 +1,50 @@
+/* Estilo do retângulo vertical */
+.retangulo {
+    width: 200px;
+    height: 300px;
+    background-color: lightblue;
+    position: absolute;
+    top: 50%; /* Coloque o retângulo no meio verticalmente */
+    left: 50%; /* Coloque o retângulo no meio horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centralizar vertical e horizontalmente */
+}
+
+/* Estilo do quadrado */
+.quadrado {
+    width: 180px;
+    height: 200px;
+    background-color: lightgoldenrodyellow;
+    position: absolute;
+    top: 48%; /* Coloque o quadrado no meio verticalmente */
+    left: 50%; /* Coloque o quadrado no meio horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centralizar vertical e horizontalmente */
+    z-index: 2;
+}
+
+/* Estilo da imagem garra_aberta */
+#garra_aberta {
+    width: 100px;
+    height: 90px;
+    position: absolute;
+    top: 41.5%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ajuste para centralizar verticalmente e horizontalmente */
+    z-index: 5;
+    transition: top 1s ease-in-out, width 1s ease-in-out; 
+}
+
+
+/* Estilo da imagem urso1 */
+#urso1 {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    position: absolute;
+    top: 55%; /* Posicione a imagem verticalmente no centro do retângulo */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ajuste para centralizar verticalmente e horizontalmente */
+    z-index: 4;
+    transition: top 1s ease-in-out, left 1s ease-in-out;
+}
+
+
