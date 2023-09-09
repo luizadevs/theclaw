@@ -1,194 +1,402 @@
-/* Estilo do retângulo vertical */
 .retangulo {
-    width: 30%; /* 200px */
-    height: 80%; /* 300px */
+    width: 30%;
+    height: 80%;
     background-color: lightblue;
     position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     object-fit: contain;
 }
 
-/* Estilo do quadrado */
 .quadrado {
-    width: 24%; /* 180px */
-    height: 43%; /* 200px */
+    width: 24%;
+    height: 43%;
     background-color: lightgoldenrodyellow;
     position: absolute;
-    top: 42%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 2;
     object-fit: contain;
 }
 
-button {
-    background-color: red;
-    width: 4%; /* 20px */
-    height: 8%; /* 20px */
-    border-radius: 100%;
+#moveDireita {
+    background-color: lightgray;
+    font-size: 45px;
+    width: 4%;
+    height: 8%;
+    border-radius: 20%;
     position: absolute;
-    top: 66%; 
-    left: 48%; 
+    top: 70%;
+    left: 48%;
     z-index: 6;
     object-fit: contain;
 }
 
-/* Estilo da imagem garra_aberta */
+#moveEsquerda {
+    background-color: lightgray;
+    font-size: 45px;
+    width: 4%;
+    height: 8%;
+    border-radius: 20%;
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    z-index: 6;
+    object-fit: contain;
+}
+
+#startAnimation {
+    background-color: red;
+    width: 4%;
+    height: 8%;
+    border-radius: 100%;
+    position: absolute;
+    top: 70%;
+    left: 56%;
+    z-index: 6;
+    object-fit: contain;
+}
+
 #garra_aberta {
     object-fit: contain;
-    width: 10%; /* 100px */
-    height: 20%; /* 90px */
+    width: 10%;
+    height: 20%;
     position: absolute;
-    top: 30%; 
+    top: 30%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     z-index: 5;
     transition: top 1s ease-in-out, width 1s ease-in-out;
 }
 
 #urso1 {
-    width: 15%; /* 10% da largura do elemento pai */
-    height: 15%; /* 10% da altura do elemento pai */
-    object-fit: contain; /* Mantém a proporção e ajusta a imagem ao elemento pai */
+    width: 15%;
+    height: 15%;
+    object-fit: contain;
     position: absolute;
-    top: 55%; /* Posicione a imagem verticalmente no centro do retângulo */
+    top: 55%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Ajuste para centralizar verticalmente e horizontalmente */
+    transform: translate(-50%, -50%);
     z-index: 4;
     transition: top 1s ease-in-out, left 1s ease-in-out;
 }
 
-@media (max-width: 1004px){
-        /* Estilo do retângulo vertical */
-.retangulo {
-    width: 30%; /* 200px */
-    height: 60%; /* 300px */
-    background-color: lightblue;
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+#urso2 {
+    width: 15%;
+    height: 15%;
     object-fit: contain;
-}
-
-/* Estilo do quadrado */
-.quadrado {
-    width: 25%; /* 180px */
-    height: 38%; /* 200px */
-    background-color: lightgoldenrodyellow;
     position: absolute;
-    top: 44%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    z-index: 2;
-    object-fit: contain;
-}
-
-button {
-    background-color: red;
-    width: 4%; /* 20px */
-    height: 5%; /* 20px */
-    border-radius: 100%;
-    position: absolute;
-    top: 66%; 
-    left: 48%; 
-    z-index: 6;
-    object-fit: contain;
-}
-
-/* Estilo da imagem garra_aberta */
-#garra_aberta {
-    object-fit: contain;
-    width: 10%; /* 100px */
-    height: 20%; /* 90px */
-    position: absolute;
-    top: 30%; 
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    z-index: 5;
-    transition: top 1s ease-in-out, width 1s ease-in-out;
-}
-
-#urso1 {
-    width: 15%; /* 10% da largura do elemento pai */
-    height: 15%; /* 10% da altura do elemento pai */
-    object-fit: contain; /* Mantém a proporção e ajusta a imagem ao elemento pai */
-    position: absolute;
-    top: 55%; /* Posicione a imagem verticalmente no centro do retângulo */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Ajuste para centralizar verticalmente e horizontalmente */
+    top: 55%;
+    left: 55%;
+    transform: translate(-50%, -50%);
     z-index: 4;
     transition: top 1s ease-in-out, left 1s ease-in-out;
 }
 
-
+#urso3 {
+    width: 15%;
+    height: 15%;
+    object-fit: contain;
+    position: absolute;
+    top: 55%;
+    left: 41%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    transition: top 1s ease-in-out, left 1s ease-in-out;
 }
 
-
-@media (max-width: 504px){
-    /* Estilo do retângulo vertical */
-.retangulo {
-width: 46%; /* 200px */
-height: 60%; /* 300px */
-background-color: lightblue;
-position: absolute;
-top: 50%; 
-left: 50%; 
-transform: translate(-50%, -50%); 
-object-fit: contain;
+#urso4 {
+    width: 15%;
+    height: 15%;
+    object-fit: contain;
+    position: absolute;
+    top: 55%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    transition: top 1s ease-in-out, left 1s ease-in-out;
 }
 
-/* Estilo do quadrado */
-.quadrado {
-width: 38%; /* 180px */
-height: 36%; /* 200px */
-background-color: lightgoldenrodyellow;
-position: absolute;
-top: 44%; 
-left: 50%; 
-transform: translate(-50%, -50%); 
-z-index: 2;
-object-fit: contain;
+#urso6 {
+    width: 15%;
+    height: 15%;
+    object-fit: contain;
+    position: absolute;
+    top: 55%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    transition: top 1s ease-in-out, left 1s ease-in-out;
 }
 
-button {
-background-color: red;
-width: 5%; /* 20px */
-height: 5%; /* 20px */
-border-radius: 100%;
-position: absolute;
-top: 66%; 
-left: 48%; 
-z-index: 6;
-object-fit: contain;
+@media (max-width: 580px) {
+    .retangulo {
+        width: 30%;
+        height: 60%;
+        background-color: lightblue;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: contain;
+    }
+
+    .quadrado {
+        width: 25%;
+        height: 38%;
+        background-color: lightgoldenrodyellow;
+        position: absolute;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        object-fit: contain;
+    }
+
+    #moveDireita {
+        background-color: lightgray;
+        font-size: 15px;
+        width: 6%;
+        height: 6%;
+        border-radius: 20%;
+        position: absolute;
+        top: 66%;
+        left: 47%;
+        z-index: 6;
+        object-fit: contain;
+    }
+
+    #moveEsquerda {
+        background-color: lightgray;
+        font-size: 15px;
+        width: 6%;
+        height: 6%;
+        border-radius: 20%;
+        position: absolute;
+        top: 66%;
+        left: 40%;
+        z-index: 6;
+        object-fit: contain;
+    }
+
+    #startAnimation {
+        background-color: red;
+        width: 6%;
+        height: 6%;
+        border-radius: 100%;
+        position: absolute;
+        top: 66%;
+        left: 55%;
+        z-index: 6;
+        object-fit: contain;
+    }
+
+    #garra_aberta {
+        object-fit: contain;
+        width: 10%;
+        height: 20%;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        transition: top 1s ease-in-out, width 1s ease-in-out;
+    }
+
+    #urso1 {
+        width: 15%;
+        height: 15%;
+        object-fit: contain;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        transition: top 1s ease-in-out, left 1s ease-in-out;
+    }
+
+    #urso2 {
+        width: 14%;
+        height: 14%;
+        object-fit: contain;
+        position: absolute;
+        top: 54%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        transition: top 1s ease-in-out, left 1s ease-in-out;
+    }
+
+    #urso3 {
+        width: 14%;
+        height: 14%;
+        object-fit: contain;
+        position: absolute;
+        top: 55%;
+        left: 42%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        transition: top 1s ease-in-out, left 1s ease-in-out;
+    }
+
+    #urso4 {
+        width: 14%;
+        height: 14%;
+        object-fit: contain;
+        position: absolute;
+        top: 56%;
+        left: 44%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        transition: top 1s ease-in-out, left 1s ease-in-out;
+    }
+
+    #urso6 {
+        width: 15%;
+        height: 15%;
+        object-fit: contain;
+        position: absolute;
+        top: 56%;
+        left: 59%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        transition: top 1s ease-in-out, left 1s ease-in-out;
+    }
 }
 
-/* Estilo da imagem garra_aberta */
-#garra_aberta {
-object-fit: contain;
-width: 10%; /* 100px */
-height: 20%; /* 90px */
-position: absolute;
-top: 30%; 
-left: 50%;
-transform: translate(-50%, -50%); 
-z-index: 5;
-transition: top 1s ease-in-out, width 1s ease-in-out;
-}
+@media (max-width: 725px) {
+    .retangulo {
+        width: 40%;
+        height: 80%;
+        background-color: lightblue;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: contain;
+    }
 
-#urso1 {
-width: 9%; /* 10% da largura do elemento pai */
-height: 9%; /* 10% da altura do elemento pai */
-object-fit: contain; /* Mantém a proporção e ajusta a imagem ao elemento pai */
-position: absolute;
-top: 55%; /* Posicione a imagem verticalmente no centro do retângulo */
-left: 50%;
-transform: translate(-50%, -50%); /* Ajuste para centralizar verticalmente e horizontalmente */
-z-index: 4;
-transition: top 1s ease-in-out, left 1s ease-in-out;
-}
+    .quadrado {
+        width: 35%;
+        height: 45%;
+        background-color: lightgoldenrodyellow;
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        object-fit: contain;
+    }
 
+    #moveDireita {
+        background-color: lightgray;
+        font-size: 15px;
+        width: 6%;
+        height: 6%;
+        border-radius: 20%;
+        position: absolute;
+        top: 70%;
+        left: 46%;
+        z-index: 6;
+        object-fit: contain;
+    }
 
+    #moveEsquerda {
+        background-color: lightgray;
+        font-size: 15px;
+        width: 6%;
+        height: 6%;
+        border-radius: 20%;
+        position: absolute;
+        top: 70%;
+        left: 36%;
+        z-index: 6;
+        object-fit: contain;
+    }
+
+    #startAnimation {
+        background-color: red;
+        width: 6%;
+        height: 6%;
+        border-radius: 100%;
+        position: absolute;
+        top: 70%;
+        left: 58%;
+        z-index: 6;
+        object-fit: contain;
+    }
+
+    #garra_aberta {
+        object-fit: contain;
+        width: 10%;
+        height: 20%;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        transition: top 1s ease-in-out, width 1s ease-in-out;
+    }
+
+    #urso1 {
+        width: 15%;
+        height: 15%;
+        object-fit: contain;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        transition: top 1s ease-in-out, left 1s ease-in-out;
+    }
+
+    #urso2 {
+        width: 14%;
+        height: 14%;
+        object-fit: contain;
+        position: absolute;
+        top: 60%;
+        left: 57%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        transition: top 1s ease-in-out, left 1s ease-in-out;
+    }
+
+    #urso3 {
+        width: 14%;
+        height: 14%;
+        object-fit: contain;
+        position: absolute;
+        top: 60%;
+        left: 37%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        transition: top 1s ease-in-out, left 1s ease-in-out;
+    }
+
+    #urso4 {
+        width: 14%;
+        height: 14%;
+        object-fit: contain;
+        position: absolute;
+        top: 60%;
+        left: 43%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        transition: top 1s ease-in-out, left 1s ease-in-out;
+    }
+
+    #urso6 {
+        width: 15%;
+        height: 15%;
+        object-fit: contain;
+        position: absolute;
+        top: 60%;
+        left: 64%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        transition: top 1s ease-in-out, left 1s ease-in-out;
+    }
 }
