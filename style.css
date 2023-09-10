@@ -1,140 +1,7 @@
-.retangulo {
-    width: 30%;
-    height: 80%;
-    background-color: lightblue;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: contain;
-}
-
-.quadrado {
-    width: 24%;
-    height: 43%;
-    background-color: lightgoldenrodyellow;
-    position: absolute;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    object-fit: contain;
-}
-
-#moveDireita {
-    background-color: lightgray;
-    font-size: 45px;
-    width: 4%;
-    height: 8%;
-    border-radius: 20%;
-    position: absolute;
-    top: 70%;
-    left: 48%;
-    z-index: 6;
-    object-fit: contain;
-}
-
-#moveEsquerda {
-    background-color: lightgray;
-    font-size: 45px;
-    width: 4%;
-    height: 8%;
-    border-radius: 20%;
-    position: absolute;
-    top: 70%;
-    left: 40%;
-    z-index: 6;
-    object-fit: contain;
-}
-
-#startAnimation {
-    background-color: red;
-    width: 4%;
-    height: 8%;
-    border-radius: 100%;
-    position: absolute;
-    top: 70%;
-    left: 56%;
-    z-index: 6;
-    object-fit: contain;
-}
-
-#garra_aberta {
-    object-fit: contain;
-    width: 10%;
-    height: 20%;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-    transition: top 1s ease-in-out, width 1s ease-in-out;
-}
-
-#urso1 {
-    width: 15%;
-    height: 15%;
-    object-fit: contain;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 4;
-    transition: top 1s ease-in-out, left 1s ease-in-out;
-}
-
-#urso2 {
-    width: 15%;
-    height: 15%;
-    object-fit: contain;
-    position: absolute;
-    top: 55%;
-    left: 55%;
-    transform: translate(-50%, -50%);
-    z-index: 4;
-    transition: top 1s ease-in-out, left 1s ease-in-out;
-}
-
-#urso3 {
-    width: 15%;
-    height: 15%;
-    object-fit: contain;
-    position: absolute;
-    top: 55%;
-    left: 41%;
-    transform: translate(-50%, -50%);
-    z-index: 4;
-    transition: top 1s ease-in-out, left 1s ease-in-out;
-}
-
-#urso4 {
-    width: 15%;
-    height: 15%;
-    object-fit: contain;
-    position: absolute;
-    top: 55%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    z-index: 4;
-    transition: top 1s ease-in-out, left 1s ease-in-out;
-}
-
-#urso6 {
-    width: 15%;
-    height: 15%;
-    object-fit: contain;
-    position: absolute;
-    top: 55%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    z-index: 4;
-    transition: top 1s ease-in-out, left 1s ease-in-out;
-}
-
 @media screen and (min-width: 768px) {
     .retangulo {
-        width: 40%;
-        height: 80%;
+        width: 30%;
+        height: 90%;
         background-color: lightblue;
         position: absolute;
         top: 50%;
@@ -144,8 +11,8 @@
     }
 
     .quadrado {
-        width: 35%;
-        height: 45%;
+        width: 25%;
+        height: 50%;
         background-color: lightgoldenrodyellow;
         position: absolute;
         top: 46%;
@@ -158,11 +25,11 @@
     #moveDireita {
         background-color: lightgray;
         font-size: 15px;
-        width: 6%;
+        width: 4%;
         height: 6%;
         border-radius: 20%;
         position: absolute;
-        top: 70%;
+        top: 75%;
         left: 46%;
         z-index: 6;
         object-fit: contain;
@@ -171,24 +38,24 @@
     #moveEsquerda {
         background-color: lightgray;
         font-size: 15px;
-        width: 6%;
+        width: 4%;
         height: 6%;
         border-radius: 20%;
         position: absolute;
-        top: 70%;
-        left: 36%;
+        top: 75%;
+        left: 40%;
         z-index: 6;
         object-fit: contain;
     }
 
     #startAnimation {
         background-color: red;
-        width: 6%;
+        width: 4%;
         height: 6%;
         border-radius: 100%;
         position: absolute;
-        top: 70%;
-        left: 58%;
+        top: 75%;
+        left: 56%;
         z-index: 6;
         object-fit: contain;
     }
@@ -223,7 +90,7 @@
         object-fit: contain;
         position: absolute;
         top: 60%;
-        left: 57%;
+        left: 55%;
         transform: translate(-50%, -50%);
         z-index: 4;
         transition: top 1s ease-in-out, left 1s ease-in-out;
@@ -235,7 +102,7 @@
         object-fit: contain;
         position: absolute;
         top: 60%;
-        left: 37%;
+        left: 40%;
         transform: translate(-50%, -50%);
         z-index: 4;
         transition: top 1s ease-in-out, left 1s ease-in-out;
@@ -247,7 +114,7 @@
         object-fit: contain;
         position: absolute;
         top: 60%;
-        left: 43%;
+        left: 44%;
         transform: translate(-50%, -50%);
         z-index: 4;
         transition: top 1s ease-in-out, left 1s ease-in-out;
@@ -259,7 +126,7 @@
         object-fit: contain;
         position: absolute;
         top: 60%;
-        left: 64%;
+        left: 60%;
         transform: translate(-50%, -50%);
         z-index: 4;
         transition: top 1s ease-in-out, left 1s ease-in-out;
