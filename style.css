@@ -131,142 +131,7 @@
     transition: top 1s ease-in-out, left 1s ease-in-out;
 }
 
-@media (max-width: 580px) {
-    .retangulo {
-        width: 30%;
-        height: 60%;
-        background-color: lightblue;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        object-fit: contain;
-    }
-
-    .quadrado {
-        width: 25%;
-        height: 38%;
-        background-color: lightgoldenrodyellow;
-        position: absolute;
-        top: 44%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-        object-fit: contain;
-    }
-
-    #moveDireita {
-        background-color: lightgray;
-        font-size: 15px;
-        width: 6%;
-        height: 6%;
-        border-radius: 20%;
-        position: absolute;
-        top: 66%;
-        left: 47%;
-        z-index: 6;
-        object-fit: contain;
-    }
-
-    #moveEsquerda {
-        background-color: lightgray;
-        font-size: 15px;
-        width: 6%;
-        height: 6%;
-        border-radius: 20%;
-        position: absolute;
-        top: 66%;
-        left: 40%;
-        z-index: 6;
-        object-fit: contain;
-    }
-
-    #startAnimation {
-        background-color: red;
-        width: 6%;
-        height: 6%;
-        border-radius: 100%;
-        position: absolute;
-        top: 66%;
-        left: 55%;
-        z-index: 6;
-        object-fit: contain;
-    }
-
-    #garra_aberta {
-        object-fit: contain;
-        width: 10%;
-        height: 20%;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 5;
-        transition: top 1s ease-in-out, width 1s ease-in-out;
-    }
-
-    #urso1 {
-        width: 15%;
-        height: 15%;
-        object-fit: contain;
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 4;
-        transition: top 1s ease-in-out, left 1s ease-in-out;
-    }
-
-    #urso2 {
-        width: 14%;
-        height: 14%;
-        object-fit: contain;
-        position: absolute;
-        top: 54%;
-        left: 55%;
-        transform: translate(-50%, -50%);
-        z-index: 3;
-        transition: top 1s ease-in-out, left 1s ease-in-out;
-    }
-
-    #urso3 {
-        width: 14%;
-        height: 14%;
-        object-fit: contain;
-        position: absolute;
-        top: 55%;
-        left: 42%;
-        transform: translate(-50%, -50%);
-        z-index: 4;
-        transition: top 1s ease-in-out, left 1s ease-in-out;
-    }
-
-    #urso4 {
-        width: 14%;
-        height: 14%;
-        object-fit: contain;
-        position: absolute;
-        top: 56%;
-        left: 44%;
-        transform: translate(-50%, -50%);
-        z-index: 4;
-        transition: top 1s ease-in-out, left 1s ease-in-out;
-    }
-
-    #urso6 {
-        width: 15%;
-        height: 15%;
-        object-fit: contain;
-        position: absolute;
-        top: 56%;
-        left: 59%;
-        transform: translate(-50%, -50%);
-        z-index: 4;
-        transition: top 1s ease-in-out, left 1s ease-in-out;
-    }
-}
-
-@media (max-width: 725px) {
+@media screen and (min-width: 768px) {
     .retangulo {
         width: 40%;
         height: 80%;
@@ -395,6 +260,141 @@
         position: absolute;
         top: 60%;
         left: 64%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        transition: top 1s ease-in-out, left 1s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .retangulo {
+        width: 60%;
+        height: 60%;
+        background-color: lightblue;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: contain;
+    }
+
+    .quadrado {
+        width: 50%;
+        height: 38%;
+        background-color: lightgoldenrodyellow;
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        object-fit: contain;
+    }
+
+    #moveDireita {
+        background-color: lightgray;
+        font-size: 10px;
+        width: 10%;
+        height: 5%;
+        border-radius: 20%;
+        position: absolute;
+        top: 70%;
+        left: 44%;
+        z-index: 6;
+        object-fit: contain;
+    }
+
+    #moveEsquerda {
+        background-color: lightgray;
+        font-size: 10px;
+        width: 10%;
+        height: 5%;
+        border-radius: 20%;
+        position: absolute;
+        top: 70%;
+        left: 32%;
+        z-index: 6;
+        object-fit: contain;
+    }
+
+    #startAnimation {
+        background-color: red;
+        width: 10%;
+        height: 5%;
+        border-radius: 100%;
+        position: absolute;
+        top: 70%;
+        left: 58%;
+        z-index: 6;
+        object-fit: contain;
+    }
+
+    #garra_aberta {
+        object-fit: contain;
+        width: 14%;
+        height: 20%;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        transition: top 1s ease-in-out, width 1s ease-in-out;
+    }
+
+    #urso1 {
+        width: 15%;
+        height: 15%;
+        object-fit: contain;
+        position: absolute;
+        top: 60%;
+        left: 49%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        transition: top 1s ease-in-out, left 1s ease-in-out;
+    }
+
+    #urso2 {
+        width: 13%;
+        height: 13%;
+        object-fit: contain;
+        position: absolute;
+        top: 60%;
+        left: 58%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        transition: top 1s ease-in-out, left 1s ease-in-out;
+    }
+
+    #urso3 {
+        width: 14%;
+        height: 14%;
+        object-fit: contain;
+        position: absolute;
+        top: 60%;
+        left: 31%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        transition: top 1s ease-in-out, left 1s ease-in-out;
+    }
+
+    #urso4 {
+        width: 14%;
+        height: 14%;
+        object-fit: contain;
+        position: absolute;
+        top: 60%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        transition: top 1s ease-in-out, left 1s ease-in-out;
+    }
+
+    #urso6 {
+        width: 14%;
+        height: 14%;
+        object-fit: contain;
+        position: absolute;
+        top: 60%;
+        left: 69%;
         transform: translate(-50%, -50%);
         z-index: 4;
         transition: top 1s ease-in-out, left 1s ease-in-out;
