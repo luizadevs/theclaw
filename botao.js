@@ -6,38 +6,81 @@ function gerarNumeroAleatorio() {
 // Função para executar a animação quando "Pegou" é escolhido
 function animacaoPegou() {
     // Coloque aqui o código da animação "Pegou"
-        const garraAberta2 = document.getElementById("garra_aberta");
-        const urso12 = document.getElementById("urso1");
-        const startPosition2 = 30; // Posição vertical inicial em porcentagem
+    const garraAberta2 = document.getElementById("garra_aberta");
+    const startPosition2 = 31; // Posição vertical inicial em porcentagem
 
-        // Função para mover a imagem para baixo
-        async function moverParaBaixo2() {
-            garraAberta2.style.top = "54%"; // Mover para a parte inferior
-            garraAberta2.style.width = "8%"; // Definir largura como 80px permanentemente
-        }
+    // Array com as IDs das imagens próximas
+    const imagensProximas = ["urso1", "urso2", "urso3", "urso4", "urso6"];
 
-        // Função para mover a imagem de volta para cima e restaurar a posição vertical inicial
-        async function moverParaCima2() {
-            garraAberta2.style.top = startPosition2 + "%"; // Mover de volta à posição centralizada vertical
-            garraAberta2.style.width = "8%"; // Manter a largura como 80px
-            urso12.style.top = startPosition2 + "%"; // Mover o urso de volta apenas verticalmente
-        }
+    // Função para encontrar a imagem mais próxima
+    function encontrarImagemMaisProxima() {
+        let imagemMaisProxima = null;
+        let distanciaMaisProxima = Number.MAX_SAFE_INTEGER;
 
-        // Função para pausar por um segundo
-        function pausarPorUmSegundo2() {
-            return new Promise(resolve => {
-                setTimeout(() => {
-                    resolve();
-                }, 1000); // 1000 milissegundos (1 segundo)
+        // Obtém as coordenadas da garra
+        const garraBoundingBox = garraAberta2.getBoundingClientRect();
+        const garraX = garraBoundingBox.left + garraBoundingBox.width / 2; // Posição horizontal da garra
+
+        // Verifique se "urso12" é uma das imagens próximas
+        if (imagensProximas.includes("urso12")) {
+            imagemMaisProxima = document.getElementById("urso12");
+        } else {
+            imagensProximas.forEach(imagemId => {
+                const imagem = document.getElementById(imagemId);
+                if (imagem) {
+                    // Obtém as coordenadas da imagem
+                    const imagemBoundingBox = imagem.getBoundingClientRect();
+                    const imagemX = imagemBoundingBox.left + imagemBoundingBox.width / 2; // Posição horizontal da imagem
+
+                    // Calcula a distância entre a garra e a imagem (horizontalmente)
+                    const distanciaX = Math.abs(garraX - imagemX);
+
+                    if (distanciaX < distanciaMaisProxima) {
+                        distanciaMaisProxima = distanciaX;
+                        imagemMaisProxima = imagem;
+                    }
+                }
             });
         }
 
-        // Chame as funções para iniciar a animação automaticamente
-        moverParaBaixo2()
-            .then(() => pausarPorUmSegundo2())
-            .then(() => moverParaCima2());
+        return imagemMaisProxima;
+    }
 
+    // Função para mover a imagem para baixo
+    async function moverParaBaixo2() {
+        garraAberta2.style.top = "54%"; // Mover para a parte inferior
+        garraAberta2.style.width = "8%"; // Definir largura como 80px permanentemente
+
+        // Espere um segundo
+        await pausarPorUmSegundo();
+
+        const imagemMaisProxima = encontrarImagemMaisProxima();
+        if (imagemMaisProxima) {
+            // Calcula a posição da garra em relação à imagem mais próxima
+            garraAberta2.style.top = startPosition2 + "%";
+            imagemMaisProxima.style.top = startPosition2 + "%"; // Agora move a imagem mais próxima junto com a garra
+        }
+
+        // Exibe no console a imagem mais próxima
+        console.log("Imagem mais próxima atual: ", imagemMaisProxima ? imagemMaisProxima.id : "Nenhuma imagem próxima encontrada");
+    }
+
+
+
+    // Função para pausar por um segundo
+    function pausarPorUmSegundo() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve();
+            }, 1000); // 1000 milissegundos (1 segundo)
+        });
+    }
+
+    // Chame a função para iniciar a animação
+    moverParaBaixo2();
 }
+
+
 
 // Função para executar a animação quando "Não Pegou" é escolhido
 function animacaoNaoPegou() {
