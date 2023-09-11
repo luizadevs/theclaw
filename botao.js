@@ -2,7 +2,6 @@
 function gerarNumeroAleatorio() {
     return Math.floor(Math.random() * 15) + 1;
 }
-
 // Função para executar a animação quando "Pegou" é escolhido
 function animacaoPegou() {
     // Coloque aqui o código da animação "Pegou"
@@ -21,27 +20,22 @@ function animacaoPegou() {
         const garraBoundingBox = garraAberta2.getBoundingClientRect();
         const garraX = garraBoundingBox.left + garraBoundingBox.width / 2; // Posição horizontal da garra
 
-        // Verifique se "urso12" é uma das imagens próximas
-        if (imagensProximas.includes("urso12")) {
-            imagemMaisProxima = document.getElementById("urso12");
-        } else {
-            imagensProximas.forEach(imagemId => {
-                const imagem = document.getElementById(imagemId);
-                if (imagem) {
-                    // Obtém as coordenadas da imagem
-                    const imagemBoundingBox = imagem.getBoundingClientRect();
-                    const imagemX = imagemBoundingBox.left + imagemBoundingBox.width / 2; // Posição horizontal da imagem
+        imagensProximas.forEach(imagemId => {
+            const imagem = document.getElementById(imagemId);
+            if (imagem) {
+                // Obtém as coordenadas da imagem
+                const imagemBoundingBox = imagem.getBoundingClientRect();
+                const imagemX = imagemBoundingBox.left + imagemBoundingBox.width / 2; // Posição horizontal da imagem
 
-                    // Calcula a distância entre a garra e a imagem (horizontalmente)
-                    const distanciaX = Math.abs(garraX - imagemX);
+                // Calcula a distância entre a garra e a imagem (horizontalmente)
+                const distanciaX = Math.abs(garraX - imagemX);
 
-                    if (distanciaX < distanciaMaisProxima) {
-                        distanciaMaisProxima = distanciaX;
-                        imagemMaisProxima = imagem;
-                    }
+                if (distanciaX < distanciaMaisProxima) {
+                    distanciaMaisProxima = distanciaX;
+                    imagemMaisProxima = imagem;
                 }
-            });
-        }
+            }
+        });
 
         return imagemMaisProxima;
     }
@@ -63,9 +57,38 @@ function animacaoPegou() {
 
         // Exibe no console a imagem mais próxima
         console.log("Imagem mais próxima atual: ", imagemMaisProxima ? imagemMaisProxima.id : "Nenhuma imagem próxima encontrada");
+
+        let premio;
+
+        if (imagemMaisProxima) {
+            // Verifica qual imagem foi encontrada e define o prêmio correspondente
+            switch (imagemMaisProxima.id) {
+                case "urso1":
+                    premio = "Sonic.html";
+                    break;
+                case "urso2":
+                    premio = "Ralsei.html";
+                    break;
+                case "urso3":
+                    premio = "Donald.html";
+                    break;
+                case "urso4":
+                    premio = "Luffy.html";
+                    break;
+                case "urso6":
+                    premio = "Freddy.html";
+                    break;
+                default:
+                    premio = "outra.html"; // Página padrão para outras imagens não especificadas
+            }
+        } else {
+            premio = ""; // Página padrão se nenhuma imagem for encontrada
+        }
+
+        setTimeout(function() {
+            window.location.href = premio;
+        }, 2000);
     }
-
-
 
     // Função para pausar por um segundo
     function pausarPorUmSegundo() {
@@ -80,6 +103,18 @@ function animacaoPegou() {
     moverParaBaixo2();
 }
 
+// Função para pausar por um segundo
+function pausarPorUmSegundo() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve();
+        }, 1000); // 1000 milissegundos (1 segundo)
+    });
+
+    // Chame a função para iniciar a animação
+    moverParaBaixo2();
+}
+
 
 
 // Função para executar a animação quando "Não Pegou" é escolhido
@@ -89,7 +124,7 @@ function animacaoNaoPegou() {
     const startWidth = 100; // Largura inicial em porcentagem
 
     async function moverParaBaixo() {
-        garraAberta.style.top = "54%"; // Mover para a parte inferior
+        garraAberta.style.top = "60%"; // Mover para a parte inferior
         garraAberta.style.width = "8%"; // Reduzir a largura para 8% após mover para baixo
     }
 
