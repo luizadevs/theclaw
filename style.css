@@ -146,8 +146,8 @@
     }
 
     .quadrado {
-        width: 50%;
-        height: 38%;
+        width: 75%;
+        height: 45%;
         background-color: lightgoldenrodyellow;
         position: absolute;
         top: 50%;
@@ -164,7 +164,7 @@
         height: 5%;
         border-radius: 20%;
         position: absolute;
-        top: 70%;
+        top: 75%;
         left: 44%;
         z-index: 6;
         object-fit: contain;
@@ -177,7 +177,7 @@
         height: 5%;
         border-radius: 20%;
         position: absolute;
-        top: 70%;
+        top: 75%;
         left: 32%;
         z-index: 6;
         object-fit: contain;
@@ -189,7 +189,7 @@
         height: 5%;
         border-radius: 100%;
         position: absolute;
-        top: 70%;
+        top: 75%;
         left: 58%;
         z-index: 6;
         object-fit: contain;
